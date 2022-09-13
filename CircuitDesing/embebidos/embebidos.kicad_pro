@@ -418,6 +418,18 @@
     [
       "255ea3b8-af73-4dd8-9773-761204920633",
       "Esp32Schematic"
+    ],
+    [
+      "4a4a8db1-1786-4804-b37e-204adf7255cc",
+      "Sensores"
+    ],
+    [
+      "baefe8d2-116f-4132-b22d-e866645ad738",
+      "Actuadores"
+    ],
+    [
+      "2a66dc13-5d83-46f7-9074-3655609524a8",
+      "Potencia"
     ]
   ],
   "text_variables": {}
