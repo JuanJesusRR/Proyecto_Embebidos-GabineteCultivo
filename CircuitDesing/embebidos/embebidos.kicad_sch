@@ -415,13 +415,13 @@
     (path "/255ea3b8-af73-4dd8-9773-761204920633/0eafdc88-306a-4707-b704-494c036b61f8"
       (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
     )
-    (path "/255ea3b8-af73-4dd8-9773-761204920633/defd9cfb-4513-4197-a4c5-73f617e877f9"
-      (reference "#PWR0104") (unit 1) (value "GND") (footprint "")
-    )
     (path "/255ea3b8-af73-4dd8-9773-761204920633/dd6387ec-c696-4b53-b7d9-c7027abf6a24"
       (reference "#PWR0105") (unit 1) (value "GND") (footprint "")
     )
     (path "/2a66dc13-5d83-46f7-9074-3655609524a8/a135e9bb-3dd4-4bac-8875-0b8619cdbde0/093773d2-48d3-4183-9a42-2d4675e4bd31"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/255ea3b8-af73-4dd8-9773-761204920633/0ad44254-abb1-4fb6-accf-28f5a072c25b"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/2a66dc13-5d83-46f7-9074-3655609524a8/a135e9bb-3dd4-4bac-8875-0b8619cdbde0/3d119db0-fa20-4eb6-83c6-89997012cb89"
@@ -467,6 +467,9 @@
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/baefe8d2-116f-4132-b22d-e866645ad738/bed51705-dc60-4740-93d9-c53c148fbcd6"
+      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/255ea3b8-af73-4dd8-9773-761204920633/c4b49ce6-7f3e-4b88-853d-1d803941a83e"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/2a66dc13-5d83-46f7-9074-3655609524a8/74549759-895a-4805-b4eb-8b7b7d22db26/c9077a35-e1c0-4d53-8b48-cd68a78981b3"
@@ -594,6 +597,12 @@
     )
     (path "/4a4a8db1-1786-4804-b37e-204adf7255cc/52ecff1d-2404-40d4-b3d5-28684b4d8d27"
       (reference "SE093") (unit 1) (value "Conn_01x03") (footprint "")
+    )
+    (path "/255ea3b8-af73-4dd8-9773-761204920633/e0bf4f25-113f-4c11-a786-ed42e07f7fea"
+      (reference "SW1") (unit 1) (value "SW_Push") (footprint "")
+    )
+    (path "/255ea3b8-af73-4dd8-9773-761204920633/9df6921d-4736-42df-a039-4d952a59294e"
+      (reference "SW2") (unit 1) (value "SW_Push") (footprint "")
     )
     (path "/255ea3b8-af73-4dd8-9773-761204920633/62dc3add-7a52-4be4-b6f2-e703bc3c5c80"
       (reference "U1") (unit 1) (value "ESP32-WROOM-32") (footprint "RF_Module:ESP32-WROOM-32")

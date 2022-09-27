@@ -323,7 +323,7 @@
     (property "Reference" "C4" (id 0) (at 119.38 63.8809 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "" (id 1) (at 119.38 66.4209 0)
+    (property "Value" "470u" (id 1) (at 119.38 66.4209 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (id 2) (at 116.5352 69.85 0)
