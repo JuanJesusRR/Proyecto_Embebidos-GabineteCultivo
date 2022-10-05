@@ -438,6 +438,10 @@
     [
       "74549759-895a-4805-b4eb-8b7b7d22db26",
       "LDO"
+    ],
+    [
+      "49f3433d-4d41-4994-b007-3fd9fa4c7900",
+      "Sensor de iluminacion"
     ]
   ],
   "text_variables": {}
