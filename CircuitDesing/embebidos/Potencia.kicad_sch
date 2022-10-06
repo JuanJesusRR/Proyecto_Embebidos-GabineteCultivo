@@ -287,7 +287,7 @@
     (uuid fb04cdd9-f3be-41f5-b9ae-ba521363e88e)
   )
 
-  (label "out_rect" (at 166.37 99.06 180)
+  (label "out_5v" (at 166.37 99.06 180)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 54ba6bcb-0d59-45f7-b418-44f58b35f21d)
   )
