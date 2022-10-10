@@ -323,7 +323,7 @@
     (property "Value" "Conn_01x02" (id 1) (at 82.55 62.23 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (id 2) (at 80.01 59.69 0)
+    (property "Footprint" "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical" (id 2) (at 80.01 59.69 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 80.01 59.69 0)

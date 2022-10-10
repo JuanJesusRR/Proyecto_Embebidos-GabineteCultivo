@@ -250,7 +250,7 @@
     (uuid daf9f53c-8abd-49fa-af52-0797e9e7ee97)
     (property "Reference" "U3" (id 0) (at 104.14 58.42 0))
     (property "Value" "LM1117-3.3" (id 1) (at 104.14 60.96 0))
-    (property "Footprint" "" (id 2) (at 104.14 66.04 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical" (id 2) (at 104.14 66.04 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm1117.pdf" (id 3) (at 104.14 66.04 0)

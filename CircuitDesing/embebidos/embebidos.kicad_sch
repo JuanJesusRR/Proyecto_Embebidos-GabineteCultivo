@@ -540,37 +540,37 @@
       (reference "D5") (unit 1) (value "1N5822") (footprint "Diode_THT:D_DO-201AD_P15.24mm_Horizontal")
     )
     (path "/baefe8d2-116f-4132-b22d-e866645ad738/39e61f26-6263-4692-8217-981d38a508b6"
-      (reference "D6") (unit 1) (value "LED") (footprint "")
+      (reference "D6") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
     (path "/baefe8d2-116f-4132-b22d-e866645ad738/ebee2c48-a2b1-480e-87ea-09464f96345f"
       (reference "D7") (unit 1) (value "1N4004") (footprint "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
     )
     (path "/baefe8d2-116f-4132-b22d-e866645ad738/1bd07a22-8798-40f3-a1d8-1a2967b2298e"
-      (reference "D8") (unit 1) (value "LED") (footprint "")
+      (reference "D8") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
     (path "/baefe8d2-116f-4132-b22d-e866645ad738/b690b023-e9ac-4784-b415-07bf3f434880"
       (reference "D9") (unit 1) (value "1N4004") (footprint "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
     )
     (path "/baefe8d2-116f-4132-b22d-e866645ad738/781cf232-e6fc-427c-8ac2-6eb2596b9a3b"
-      (reference "D10") (unit 1) (value "LED") (footprint "")
+      (reference "D10") (unit 1) (value "LED") (footprint "LED_SMD:LED_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
     (path "/baefe8d2-116f-4132-b22d-e866645ad738/d68a1a75-99fc-464a-9107-6136ca6e8153"
       (reference "D11") (unit 1) (value "1N4004") (footprint "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal")
     )
     (path "/4a4a8db1-1786-4804-b37e-204adf7255cc/66c9ee02-35bd-4eca-9b87-50df2f54ca15"
-      (reference "DHT11_1") (unit 1) (value "Conn_01x03") (footprint "")
+      (reference "DHT11_1") (unit 1) (value "Conn_01x03") (footprint "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical")
     )
     (path "/4a4a8db1-1786-4804-b37e-204adf7255cc/7b087672-a261-42e8-9a81-a3e5de088c9d"
-      (reference "DHT11_2") (unit 1) (value "Conn_01x03") (footprint "")
+      (reference "DHT11_2") (unit 1) (value "Conn_01x03") (footprint "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical")
     )
     (path "/4a4a8db1-1786-4804-b37e-204adf7255cc/0823b20b-a4db-47c0-9c4c-50c512401f1f"
       (reference "HC-SR4") (unit 1) (value "Conn_01x04") (footprint "Connector_JST:JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical")
     )
     (path "/4a4a8db1-1786-4804-b37e-204adf7255cc/49f3433d-4d41-4994-b007-3fd9fa4c7900/4574ea61-9318-4696-912e-66107addb1a9"
-      (reference "J1") (unit 1) (value "Conn_01x02") (footprint "")
+      (reference "J1") (unit 1) (value "Conn_01x02") (footprint "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical")
     )
     (path "/2a66dc13-5d83-46f7-9074-3655609524a8/a135e9bb-3dd4-4bac-8875-0b8619cdbde0/810ad703-c27e-4129-9cf8-0a0a3d8c9560"
-      (reference "L1") (unit 1) (value "100u") (footprint "")
+      (reference "L1") (unit 1) (value "100u") (footprint "Inductor_SMD:L_0603_1608Metric_Pad1.05x0.95mm_HandSolder")
     )
     (path "/baefe8d2-116f-4132-b22d-e866645ad738/300b40b9-0f22-49e2-89f3-427fcd3d7cfd"
       (reference "Q1") (unit 1) (value "IRF540N") (footprint "Package_TO_SOT_THT:TO-220-3_Vertical")
@@ -603,13 +603,13 @@
       (reference "R7") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/4a4a8db1-1786-4804-b37e-204adf7255cc/52ecff1d-2404-40d4-b3d5-28684b4d8d27"
-      (reference "SE93") (unit 1) (value "Conn_01x03") (footprint "")
+      (reference "SE93") (unit 1) (value "Conn_01x03") (footprint "Connector_JST:JST_EH_B3B-EH-A_1x03_P2.50mm_Vertical")
     )
     (path "/255ea3b8-af73-4dd8-9773-761204920633/e0bf4f25-113f-4c11-a786-ed42e07f7fea"
-      (reference "SW1") (unit 1) (value "SW_Push") (footprint "")
+      (reference "SW1") (unit 1) (value "SW_Push") (footprint "Button_Switch_SMD:SW_SPST_EVQP0")
     )
     (path "/255ea3b8-af73-4dd8-9773-761204920633/9df6921d-4736-42df-a039-4d952a59294e"
-      (reference "SW2") (unit 1) (value "SW_Push") (footprint "")
+      (reference "SW2") (unit 1) (value "SW_Push") (footprint "Button_Switch_SMD:SW_SPST_EVQP0")
     )
     (path "/255ea3b8-af73-4dd8-9773-761204920633/62dc3add-7a52-4be4-b6f2-e703bc3c5c80"
       (reference "U1") (unit 1) (value "ESP32-WROOM-32") (footprint "RF_Module:ESP32-WROOM-32")
@@ -618,16 +618,16 @@
       (reference "U2") (unit 1) (value "LM2576S-5") (footprint "Package_TO_SOT_SMD:TO-263-5_TabPin3")
     )
     (path "/2a66dc13-5d83-46f7-9074-3655609524a8/74549759-895a-4805-b4eb-8b7b7d22db26/daf9f53c-8abd-49fa-af52-0797e9e7ee97"
-      (reference "U3") (unit 1) (value "LM1117-3.3") (footprint "")
+      (reference "U3") (unit 1) (value "LM1117-3.3") (footprint "Package_TO_SOT_THT:TO-220-3_Vertical")
     )
     (path "/4a4a8db1-1786-4804-b37e-204adf7255cc/49f3433d-4d41-4994-b007-3fd9fa4c7900/c5dbc2f4-347d-4e8b-9dc5-05ae6c8ee4e9"
       (reference "U4") (unit 1) (value "LM741") (footprint "")
     )
     (path "/baefe8d2-116f-4132-b22d-e866645ad738/52325a88-4095-45a0-b602-a8ec1792f959"
-      (reference "Vent1") (unit 1) (value "Conn_01x02") (footprint "")
+      (reference "Vent1") (unit 1) (value "Conn_01x02") (footprint "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical")
     )
     (path "/baefe8d2-116f-4132-b22d-e866645ad738/2ef6de35-2f2d-4e59-86f8-a3e759710aef"
-      (reference "Vent2") (unit 1) (value "Conn_01x02") (footprint "")
+      (reference "Vent2") (unit 1) (value "Conn_01x02") (footprint "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical")
     )
   )
 )
