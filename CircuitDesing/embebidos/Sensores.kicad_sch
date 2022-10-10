@@ -162,7 +162,6 @@
   )
 
 
-
   (wire (pts (xy 69.85 67.31) (xy 69.85 72.39))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 1be4270c-bed4-4f99-8555-56e576274d97)
@@ -320,7 +319,7 @@
     (property "Value" "Conn_01x04" (id 1) (at 82.55 129.5399 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "" (id 2) (at 80.01 127 0)
+    (property "Footprint" "Connector_JST:JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical" (id 2) (at 80.01 127 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 80.01 127 0)
