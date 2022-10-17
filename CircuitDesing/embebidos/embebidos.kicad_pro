@@ -432,12 +432,32 @@
       "Potencia"
     ],
     [
+      "6883cda8-9c83-4f43-b6c5-936142ee57ec",
+      "Conversor_NLog3"
+    ],
+    [
       "74549759-895a-4805-b4eb-8b7b7d22db26",
       "LDO"
     ],
     [
       "49f3433d-4d41-4994-b007-3fd9fa4c7900",
       "Sensor de iluminacion"
+    ],
+    [
+      "564765a6-2a30-47eb-84d6-741ce30487fa",
+      "Conversor_NLog1"
+    ],
+    [
+      "329a0438-132e-4ea6-ad41-5f627ea80d35",
+      "Conversor_NLog2"
+    ],
+    [
+      "98ba4dab-b14f-4738-95bb-dc1c0da7c6a2",
+      "Conversor_NLog4"
+    ],
+    [
+      "3bbf86fb-9c3d-4041-add8-b662fd19d6ee",
+      "Conversor_NLog5"
     ]
   ],
   "text_variables": {}

@@ -303,8 +303,8 @@
   )
 
   (no_connect (at 127 68.58) (uuid 7d0e5225-464f-410f-9799-7b720eac4a57))
-  (no_connect (at 132.08 68.58) (uuid 7d0e5225-464f-410f-9799-7b720eac4a57))
-  (no_connect (at 137.16 76.2) (uuid 7d0e5225-464f-410f-9799-7b720eac4a57))
+  (no_connect (at 132.08 68.58) (uuid 7d0e5225-464f-410f-9799-7b720eac4a58))
+  (no_connect (at 137.16 76.2) (uuid 7d0e5225-464f-410f-9799-7b720eac4a59))
 
   (wire (pts (xy 160.02 71.12) (xy 160.02 73.66))
     (stroke (width 0) (type default) (color 0 0 0 0))
