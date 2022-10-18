@@ -48,7 +48,13 @@
           "min_clearance": 0.508
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -112,8 +118,15 @@
         "solder_mask_min_width": 0.0,
         "use_height_for_length_calcs": true
       },
-      "track_widths": [],
-      "via_dimensions": [],
+      "track_widths": [
+        0.0
+      ],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
@@ -353,6 +366,104 @@
         "track_width": 0.25,
         "via_diameter": 0.8,
         "via_drill": 0.4,
+        "wire_width": 6.0
+      },
+      {
+        "bus_width": 12.0,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "information",
+        "nets": [
+          "/Actuadores/Conversor_NLog1/HV1",
+          "/Actuadores/Conversor_NLog1/HV2",
+          "/Actuadores/Conversor_NLog1/LV2",
+          "/Actuadores/Conversor_NLog2/HV1",
+          "/Actuadores/Conversor_NLog2/HV2",
+          "/Actuadores/Conversor_NLog2/LV2",
+          "/Actuadores/Conversor_NLog3/HV1",
+          "/Actuadores/Conversor_NLog3/HV2",
+          "/Actuadores/Conversor_NLog3/LV2",
+          "/Actuadores/Conversor_NLog4/HV1",
+          "/Actuadores/Conversor_NLog4/HV2",
+          "/Actuadores/Conversor_NLog4/LV2",
+          "/Botones",
+          "/Buzzer",
+          "/Esp32Schematic/BOOT",
+          "/Esp32Schematic/IO2",
+          "/Esp32Schematic/IO26",
+          "/Esp32Schematic/IO27",
+          "/Esp32Schematic/IO32",
+          "/Esp32Schematic/IO4",
+          "/Esp32Schematic/IO5",
+          "/HC-SR04Echo",
+          "/HC-SR04Trig",
+          "/LedU1",
+          "/Led_Verde",
+          "/Prog_Rx",
+          "/Prog_Tx",
+          "/Sensores/Conversor_NLog5/HV1",
+          "/Sensores/Conversor_NLog5/HV2",
+          "/c_bomba",
+          "/c_hum",
+          "/c_vent1",
+          "/c_vent2",
+          "/dht11_1d",
+          "/dht11_2d",
+          "/lm393_d",
+          "/se093_d",
+          "3.3v",
+          "GND",
+          "Net-(10k1-Pad2)",
+          "Net-(10k3-Pad1)",
+          "Net-(10k3-Pad2)",
+          "Net-(7k1-Pad1)",
+          "Net-(C1-Pad2)",
+          "Net-(D1-Pad2)",
+          "Net-(D2-Pad2)",
+          "Net-(D5-Pad2)",
+          "Net-(D6-Pad2)",
+          "Net-(L_p1-Pad2)",
+          "Net-(LedRojo1-Pad1)",
+          "Net-(LedRojo1-Pad2)",
+          "Net-(LedVerde1-Pad1)",
+          "Net-(Q1-Pad1)",
+          "SCL",
+          "SDA"
+        ],
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.6,
+        "via_diameter": 1.6,
+        "via_drill": 0.4,
+        "wire_width": 6.0
+      },
+      {
+        "bus_width": 12.0,
+        "clearance": 0.3,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "power",
+        "nets": [
+          "5v",
+          "Net-(Bomba1-Pad1)",
+          "Net-(D3-Pad2)",
+          "Net-(D7-Pad2)",
+          "Net-(D8-Pad2)"
+        ],
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 1.5,
+        "via_diameter": 1.6,
+        "via_drill": 0.5,
         "wire_width": 6.0
       }
     ],
