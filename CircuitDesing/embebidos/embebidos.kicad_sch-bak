@@ -1534,7 +1534,7 @@
     (property "Value" "Conn_01x02" (id 1) (at 97.79 142.2399 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_JST:JST_EH_S2B-EH_1x02_P2.50mm_Horizontal" (id 2) (at 95.25 139.7 0)
+    (property "Footprint" "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical" (id 2) (at 95.25 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 95.25 139.7 0)
@@ -2352,7 +2352,7 @@
       (reference "LedRojo1") (unit 1) (value "Conn_01x02") (footprint "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical")
     )
     (path "/0e249da4-68d4-4064-8547-85f8153e57ac"
-      (reference "LedVerde1") (unit 1) (value "Conn_01x02") (footprint "Connector_JST:JST_EH_S2B-EH_1x02_P2.50mm_Horizontal")
+      (reference "LedVerde1") (unit 1) (value "Conn_01x02") (footprint "Connector_JST:JST_EH_B2B-EH-A_1x02_P2.50mm_Vertical")
     )
     (path "/ea13b360-d3b6-4de1-838a-c39854ce4b3a"
       (reference "Pantalla-I2C1") (unit 1) (value "Conn_01x04") (footprint "Connector_JST:JST_EH_B4B-EH-A_1x04_P2.50mm_Vertical")
