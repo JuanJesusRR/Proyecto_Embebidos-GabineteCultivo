@@ -1,0 +1,6 @@
+source "/home/sergio/ESP32_IDF/esp-idf/components/app_update/Kconfig.projbuild"
+source "/home/sergio/ESP32_IDF/esp-idf/components/bootloader/Kconfig.projbuild"
+source "/home/sergio/ESP32_IDF/esp-idf/components/esp_rom/Kconfig.projbuild"
+source "/home/sergio/ESP32_IDF/esp-idf/components/esptool_py/Kconfig.projbuild"
+source "/home/sergio/ESP32_IDF/esp-idf/components/partition_table/Kconfig.projbuild"
+source "/home/sergio/ESP32_IDF/Final_proyect/Module_OLED_SCREEN/components/Kconfig.projbuild"
