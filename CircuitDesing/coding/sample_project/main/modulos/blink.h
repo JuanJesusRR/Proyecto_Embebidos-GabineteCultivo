@@ -1,7 +1,7 @@
 
 
-#define led1 15
-u_int8_t led_level;
+#define led1 23
+
 
 esp_err_t init_led(void);
 esp_err_t blink_led(void);
