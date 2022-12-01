@@ -26,7 +26,7 @@ void app_main(void)
 //en VTimercallback se lee el pin, en este caso el 32 ya que es el chanel 4 del ADC1
 void vTimerCallback(TimerHandle_t pxTimer)
 {
-    ADC_VALUE = adc1_get_raw(ADC1_CHANNEL_4); // pin 32
+    ADC_VALUE = adc1_get_raw(ADC1_CHANNEL_6); // pin 34
     Read_Button();
     define_button_action();
      
