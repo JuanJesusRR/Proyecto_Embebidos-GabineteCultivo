@@ -6,9 +6,11 @@
 #include <esp_err.h>
 
 
-#define TRIGGER_GPIO 2
-#define ECHO_GPIO 15
+#define TRIGGER_GPIO 23
+#define ECHO_GPIO 16
 #define MAX_DISTANCE_CM 500 // 5m max
+
+float distance;
 
 void ultrasonic_test(void *pvParameters)
 {
@@ -21,28 +23,36 @@ void ultrasonic_test(void *pvParameters)
 
     while (true)
     {
-        float distance;
+        
         esp_err_t res = ultrasonic_measure(&sensor, MAX_DISTANCE_CM, &distance);
         if (res != ESP_OK)
         {
-            printf("Error %d: ", res);
+            //printf("Error %d: ", res);
             switch (res)
             {
                 case ESP_ERR_ULTRASONIC_PING:
-                    printf("Cannot ping (device is in invalid state)\n");
+                    //printf("Cannot ping (device is in invalid state)\n");
+                    distance=0;
+                    vTaskDelay(pdMS_TO_TICKS(500));
                     break;
                 case ESP_ERR_ULTRASONIC_PING_TIMEOUT:
-                    printf("Ping timeout (no device found)\n");
+                    //printf("Ping timeout (no device found)\n");
+                    distance=0;
+                    vTaskDelay(pdMS_TO_TICKS(500));
                     break;
                 case ESP_ERR_ULTRASONIC_ECHO_TIMEOUT:
-                    printf("Echo timeout (i.e. distance too big)\n");
+                    //printf("Echo timeout (i.e. distance too big)\n");
+                    distance=0;
+                    vTaskDelay(pdMS_TO_TICKS(500));
                     break;
                 default:
-                    printf("%s\n", esp_err_to_name(res));
+                    //printf("%s\n", esp_err_to_name(res));
+                    distance=0;
+                    vTaskDelay(pdMS_TO_TICKS(500));
             }
         }
         else
-            printf("Distance: %0.04f m\n", distance);
+           // printf("Distance: %0.04f m\n", distance);
             
         vTaskDelay(pdMS_TO_TICKS(500));
     }
