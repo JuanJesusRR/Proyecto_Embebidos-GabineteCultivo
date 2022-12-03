@@ -16,17 +16,17 @@
 
 
 void app_main()
-{   
+{   setDuty(1000);
     set_PWM();
     set_timer();
 
     /*xTaskCreate(ultrasonic_test, "ultrasonic_test", configMINIMAL_STACK_SIZE * 3, NULL, 3, NULL);
     xTaskCreate(blink,"blink",configMINIMAL_STACK_SIZE * 3, NULL, 4, NULL);
     xTaskCreate(soil_humidity,"soil_humidity",configMINIMAL_STACK_SIZE*3,NULL,5,NULL);*/
-    xTaskCreate(dht11,"dht11",configMINIMAL_STACK_SIZE*3,NULL, 5, NULL);
-    while (1)
+    //xTaskCreate(dht11,"dht11",configMINIMAL_STACK_SIZE*3,NULL, 5, NULL);
+    /*while (1)
     {
-        printf("Temperatura %fC \n",temp);/* code */
+        printf("Temperatura %fC \n",temp);
         vTaskDelay(100);
         if(temp>22){
             setDuty(900);
@@ -37,9 +37,10 @@ void app_main()
         }
     
     
-    }
+    }*/
     
-        printf("Temperatura %.1f%%",temp);
+        //printf("Temperatura %.1f%%",temp);
+
 
 }
 

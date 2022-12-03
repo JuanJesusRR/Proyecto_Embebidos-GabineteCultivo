@@ -65,7 +65,7 @@ esp_err_t set_timer(void)
 esp_err_t set_PWM(void)
 {
     ledc_channel_config_t PWM_channel_conf = {0};
-    PWM_channel_conf.gpio_num = 18;
+    PWM_channel_conf.gpio_num = 12;
     PWM_channel_conf.speed_mode = LEDC_HIGH_SPEED_MODE;
     PWM_channel_conf.channel = LEDC_CHANNEL_0;
     PWM_channel_conf.intr_type = LEDC_TIMER_0;
