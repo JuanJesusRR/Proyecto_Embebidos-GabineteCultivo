@@ -5,18 +5,20 @@
 #include <ultrasonic.h>
 #include <esp_err.h>
 #include "driver/gpio.h"
+/* Librerias que  Se refieren a los distintos sensores y un blink de ejemplo*/
 #include "modulos/ultrasonido.h"
 #include "modulos/blink.h"
 #include "modulos/soil_humidity.h"
 #include "modulos/dht11.h"
-
+/* Librerias  referentes a los actuadores*/
 #include"actuadores/vent.h"
 
 
 
 
 void app_main()
-{   setDuty(1000);
+{   /*En este se inicializan los parametros del PWM*/
+    setDuty(1000);
     set_PWM();
     set_timer();
 

@@ -8,10 +8,15 @@
 static const char *TAG = "Main";
 //#define led1 32
 //uint8_t led1_level = 0;
+
+/* Se inicializan las variables del control del PWM*/
 TimerHandle_t xTimers;
 int interval = 1000;
 int timer_ID = 1;
 int duty = 0;
+int gpio_num =12;
+
+
 esp_err_t init_led(void);
 esp_err_t blink_led1(void);
 esp_err_t set_timer(void);
@@ -65,7 +70,7 @@ esp_err_t set_timer(void)
 esp_err_t set_PWM(void)
 {
     ledc_channel_config_t PWM_channel_conf = {0};
-    PWM_channel_conf.gpio_num = 12;
+    PWM_channel_conf.gpio_num = gpio_num;
     PWM_channel_conf.speed_mode = LEDC_HIGH_SPEED_MODE;
     PWM_channel_conf.channel = LEDC_CHANNEL_0;
     PWM_channel_conf.intr_type = LEDC_TIMER_0;
