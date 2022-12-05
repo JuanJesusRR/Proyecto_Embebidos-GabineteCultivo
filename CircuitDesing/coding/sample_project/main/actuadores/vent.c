@@ -12,7 +12,7 @@ static const char *TAG = "Main";
 /* Se inicializan las variables del control del PWM*/
 TimerHandle_t xTimers;
 int interval = 1000;
-int timer_ID = 1;
+int timer_ID1 = 1;
 int duty = 0;
 int gpio_num =12;
 
@@ -39,13 +39,13 @@ void vTimerCallback(TimerHandle_t pxTimer)
 }
 
 
-esp_err_t set_timer(void)
+esp_err_t set_timer1(void)
 {
     ESP_LOGI(TAG, "timer init configuration");
     xTimers = xTimerCreate("Timer",                 // Just a text name, not used by the kernel.
                            pdMS_TO_TICKS(interval), // The timer period in ticks.
                            pdTRUE,                  // The timers will auto-reload themselves when they expire.
-                           (void *)timer_ID,        // Assign each timer a unique id equal to its array index.
+                           (void *)timer_ID1,        // Assign each timer a unique id equal to its array index.
                            vTimerCallback           // Each timer calls the same callback when it expires.
     );
 
