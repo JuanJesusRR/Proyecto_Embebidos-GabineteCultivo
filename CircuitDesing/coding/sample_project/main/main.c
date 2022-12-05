@@ -31,12 +31,18 @@ char string[30];
 #define CONFIG_DC_GPIO 15
 //#define CONFIG_RESET_GPIO 14
 #define CONFIG_SPI3_HOST 1
-
+float temp =130;
 void app_main()
 {   
+    xTaskCreate(dht11,"dht11",configMINIMAL_STACK_SIZE*3,NULL, 5, NULL);
     spi_master_init(&dev, CONFIG_MOSI_GPIO, CONFIG_SCLK_GPIO, CONFIG_CS_GPIO, CONFIG_DC_GPIO, CONFIG_RESET_GPIO);
 	set_timer();
 	set_ADC();
+    while (1)
+    {
+        setTemp(getTemp());
+        vTaskDelay(200);
+    }
     
     /*En este se inicializan los parametros del PWM*/
     // setDuty(1000);
@@ -44,7 +50,7 @@ void app_main()
     // set_timer();
 
     // xTaskCreate(ultrasonic_test, "ultrasonic_test", configMINIMAL_STACK_SIZE * 3, NULL, 3, NULL);
-    // xTaskCreate(dht11,"dht11",configMINIMAL_STACK_SIZE*3,NULL, 5, NULL);
+    //xTaskCreate(dht11,"dht11",configMINIMAL_STACK_SIZE*3,NULL, 5, NULL);
     
     // while (1)
     // {

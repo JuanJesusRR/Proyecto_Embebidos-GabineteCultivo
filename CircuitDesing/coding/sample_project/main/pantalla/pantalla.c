@@ -38,9 +38,9 @@ int Authomatic_air_humidity = 40;
 int Authomatic_tank_level = 60;
 int Authomatic_temp = 15;
 // Manual settings
-int Manual_soil_humidity = 68;
+int Manual_soil_humidity = 20;
 int Manual_air_humidity = 47;
-int Manual_Temp =10;
+int Manual_Temp = 10;
 
 /// states
 char actual_state = '0';
@@ -64,6 +64,11 @@ esp_err_t Select_line(void);
 esp_err_t Enter(void);
 esp_err_t Go_to_back(void);
 esp_err_t configure_manual_settings(void);
+
+void setTemp(float temperature)
+{
+	Temp = temperature;
+}
 
 void vTimerCallback(TimerHandle_t pxTimer)
 {
@@ -218,7 +223,7 @@ esp_err_t FSM(void)
 		{
 			ESP_LOGW(tag, "estoy en 5");
 			ssd1306_display_text(&dev, actual_line, "*", 1, false);
-			//configure_manual_settings();
+			configure_manual_settings();
 		}
 
 		break;
@@ -493,14 +498,15 @@ esp_err_t configure_manual_settings(void)
 			if (Manual_soil_humidity >= 100)
 			{
 				Manual_soil_humidity = 30;
+				ssd1306_clear_line(&dev, actual_line, false);
 				sprintf(&string, " Soil H2O:%02d", Manual_soil_humidity);
-				ssd1306_display_text(&dev, 1, string, strlen(string), false);
+				ssd1306_display_text(&dev, actual_line, string, strlen(string), false);
 			}
 			else
 			{
 				Manual_soil_humidity += 5;
 				sprintf(&string, " Soil H2O:%02d", Manual_soil_humidity);
-				ssd1306_display_text(&dev, 1, string, strlen(string), false);
+				ssd1306_display_text(&dev, actual_line, string, strlen(string), false);
 			}
 		}
 
@@ -512,14 +518,15 @@ esp_err_t configure_manual_settings(void)
 			if (Manual_air_humidity >= 100)
 			{
 				Manual_air_humidity = 30;
+				ssd1306_clear_line(&dev, actual_line, false);
 				sprintf(&string, " Air H2O:%02d", Manual_air_humidity);
-				ssd1306_display_text(&dev, 2, string, strlen(string), false);
+				ssd1306_display_text(&dev, actual_line, string, strlen(string), false);
 			}
 			else
 			{
 				Manual_air_humidity += 5;
 				sprintf(&string, " Air H2O:%02d", Manual_air_humidity);
-				ssd1306_display_text(&dev, 2, string, strlen(string), false);
+				ssd1306_display_text(&dev, actual_line, string, strlen(string), false);
 			}
 		}
 
@@ -530,15 +537,16 @@ esp_err_t configure_manual_settings(void)
 		{
 			if (Manual_Temp >= 35)
 			{
-				Manual_soil_humidity = 15;
+				Manual_Temp = 15;
+				ssd1306_clear_line(&dev, actual_line, false);
 				sprintf(&string, " Temp:%02d", Manual_Temp);
-				ssd1306_display_text(&dev, 3, string, strlen(string), false);
+				ssd1306_display_text(&dev, actual_line, string, strlen(string), false);
 			}
 			else
 			{
-				Manual_soil_humidity += 1;
+				Manual_Temp += 1;
 				sprintf(&string, " Temp:%02d", Manual_Temp);
-				ssd1306_display_text(&dev, 3, string, strlen(string), false);
+				ssd1306_display_text(&dev, actual_line, string, strlen(string), false);
 			}
 		}
 

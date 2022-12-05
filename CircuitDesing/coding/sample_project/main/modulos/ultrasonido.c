@@ -11,6 +11,9 @@
 #define MAX_DISTANCE_CM 500 // 5m max
 
 float distance;
+float getDis(){
+    return distance;
+}
 
 void ultrasonic_test(void *pvParameters)
 {
