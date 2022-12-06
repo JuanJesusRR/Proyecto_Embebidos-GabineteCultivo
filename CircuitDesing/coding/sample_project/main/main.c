@@ -31,23 +31,50 @@ char string[30];
 #define CONFIG_DC_GPIO 15
 //#define CONFIG_RESET_GPIO 14
 #define CONFIG_SPI3_HOST 1
-float temp =130;
+
 void app_main()
 {   
     xTaskCreate(dht11,"dht11",configMINIMAL_STACK_SIZE*3,NULL, 5, NULL);
+    xTaskCreate(ultrasonic_test, "ultrasonic_test", configMINIMAL_STACK_SIZE * 3, NULL, 3, NULL);
     spi_master_init(&dev, CONFIG_MOSI_GPIO, CONFIG_SCLK_GPIO, CONFIG_CS_GPIO, CONFIG_DC_GPIO, CONFIG_RESET_GPIO);
 	set_timer();
 	set_ADC();
+    setDuty(1000);
+    //setGpio(12);
+    //set_PWM();
+    //set_timer1();
+    //setGpio(12);
+    init_humid();
+    init_ventout();
+    init_ventin();
+    //xTaskCreate(blink,"blink",configMINIMAL_STACK_SIZE*3,NULL,5, NULL);
     while (1)
-    {
+    {   
+        setHum(getHum());
         setTemp(getTemp());
         vTaskDelay(200);
+        if(getHum()>=80){
+            //setGpio(18);
+            //set_PWM();
+            ventoutControl(1);
+            ventinControl(1);
+            humidControl(0);
+            printf("Prendiendo Ventilador");
+            vTaskDelay(1000);
+        }else if (getHum()<=77)
+        {
+            //setGpio(12);
+           // set_PWM();
+           ventoutControl(0);
+           ventinControl(0);
+           humidControl(1);
+            printf("Prendiendo humidificador");
+            vTaskDelay(1000);
+        }
+        
     }
     
     /*En este se inicializan los parametros del PWM*/
-    // setDuty(1000);
-    // set_PWM();
-    // set_timer();
 
     // xTaskCreate(ultrasonic_test, "ultrasonic_test", configMINIMAL_STACK_SIZE * 3, NULL, 3, NULL);
     //xTaskCreate(dht11,"dht11",configMINIMAL_STACK_SIZE*3,NULL, 5, NULL);

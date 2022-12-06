@@ -4,28 +4,45 @@
 #include "freertos/task.h"
 
 
-#define led1 23
-u_int8_t led_level =0;
-esp_err_t init_led(void){
+#define ventout 18
+#define humidificator 12
+#define ventin 19
 
-    gpio_reset_pin(led1);
-    gpio_set_direction(led1, GPIO_MODE_OUTPUT);
+esp_err_t init_ventout(void){
+
+    gpio_reset_pin(ventout);
+    gpio_set_direction(ventout, GPIO_MODE_OUTPUT);
 
     return ESP_OK;
 }
-esp_err_t blink_led(void){
-    led_level =!led_level;
-    gpio_set_level(led1, led_level);
+esp_err_t ventoutControl(bool i){
+
+    gpio_set_level(ventout, i);
     return ESP_OK;
 }
 
+esp_err_t init_humid(void){
 
-void blink(void *pvParameters){
-    init_led();
-    while (true)
-    {
-        blink_led();
-        vTaskDelay(200);
-    }
-    
+    gpio_reset_pin(humidificator);
+    gpio_set_direction(humidificator, GPIO_MODE_OUTPUT);
+
+    return ESP_OK;
+}
+esp_err_t humidControl(bool i){
+
+    gpio_set_level(humidificator, i);
+    return ESP_OK;
+}
+
+esp_err_t init_ventin(void){
+
+    gpio_reset_pin(ventin);
+    gpio_set_direction(ventin, GPIO_MODE_OUTPUT);
+
+    return ESP_OK;
+}
+esp_err_t ventinControl(bool i){
+
+    gpio_set_level(ventin, i);
+    return ESP_OK;
 }

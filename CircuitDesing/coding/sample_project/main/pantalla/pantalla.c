@@ -69,6 +69,9 @@ void setTemp(float temperature)
 {
 	Temp = temperature;
 }
+void setHum(float humid){
+	Air_humidity = humid;
+}
 
 void vTimerCallback(TimerHandle_t pxTimer)
 {
@@ -143,7 +146,7 @@ esp_err_t FSM(void)
 			ssd1306_display_text(&dev, actual_line, "*", 1, false);
 		}
 
-		ESP_LOGW(tag, "estoy en 1");
+		//ESP_LOGW(tag, "estoy en 1");
 
 		break;
 
@@ -162,7 +165,7 @@ esp_err_t FSM(void)
 		sprintf(&string, "Ligth level:%02d", Ligth_level);
 		ssd1306_display_text(&dev, 5, string, strlen(string), false);
 		ssd1306_display_text(&dev, 7, "Back", 4, false);
-		ESP_LOGW(tag, "estoy en 2");
+		//ESP_LOGW(tag, "estoy en 2");
 		break;
 	case '3': //  configuration_settings
 
@@ -183,7 +186,7 @@ esp_err_t FSM(void)
 
 			ssd1306_display_text(&dev, actual_line, "*", 1, false);
 		}
-		ESP_LOGW(tag, "estoy en 3");
+		//ESP_LOGW(tag, "estoy en 3");
 		break;
 
 	case '4': // Automatic_settings
@@ -221,7 +224,7 @@ esp_err_t FSM(void)
 
 		else
 		{
-			ESP_LOGW(tag, "estoy en 5");
+			//ESP_LOGW(tag, "estoy en 5");
 			ssd1306_display_text(&dev, actual_line, "*", 1, false);
 			configure_manual_settings();
 		}
@@ -229,7 +232,7 @@ esp_err_t FSM(void)
 		break;
 
 	default:
-		ESP_LOGW(tag, "estoy en default");
+		//ESP_LOGW(tag, "estoy en default");
 		actual_state = initial_state;
 		break;
 	}

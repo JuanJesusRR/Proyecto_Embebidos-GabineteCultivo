@@ -1,8 +1,9 @@
 
+esp_err_t init_ventout(void);
+esp_err_t ventoutControl(bool i);
 
-#define led1 23
+esp_err_t init_humid(void);
+esp_err_t humidControl(bool i);
 
-
-esp_err_t init_led(void);
-esp_err_t blink_led(void);
-void blink(void *pvParameters);
+esp_err_t init_ventin(void);
+esp_err_t ventinControl(bool i);
