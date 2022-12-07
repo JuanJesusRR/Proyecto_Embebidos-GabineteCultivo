@@ -9,3 +9,4 @@ void setTemp(float temperature);
 void setHum(float humid);
 void setTankLevel(float tank);
 void setSoilhumidity(int soil);
+void setLight(float light);

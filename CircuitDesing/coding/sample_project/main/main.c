@@ -53,6 +53,7 @@ void app_main()
     bombaControl(0);
     vTaskDelay(200);
     float dis;
+    float light;
     //xTaskCreate(blink,"blink",configMINIMAL_STACK_SIZE*3,NULL,5, NULL);
     while (1)
     {   
@@ -65,9 +66,11 @@ void app_main()
         dis = dis*100 *100/5;
         dis =round(dis);
         setTankLevel(dis);
+        light =getLight()*100/4095;
         printf(" Nivel: %0.1f%%",dis);
         printf(" Humedad %0.1f%%",getHum());
-        
+        printf(" Luz %0.1f",light);
+        setLight(light);
         printf("Humedad suelo %d \n",getSoil_Humidity()*100/4095);
         
         waterControl();

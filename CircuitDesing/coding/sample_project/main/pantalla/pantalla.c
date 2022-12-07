@@ -19,7 +19,7 @@ int Soil_humidity = 10;
 int Temp = 20;
 int Air_humidity = 25;
 float tank_level = 50;
-bool Ligth_level = true;
+float Ligth_level = 0;
 // Buttoms variables
 int selected_buttonSW = 0;
 int ADC_Buttoms_VALUE = 0;
@@ -66,6 +66,9 @@ esp_err_t Enter(void);
 esp_err_t Go_to_back(void);
 esp_err_t configure_manual_settings(void);
 
+void setLight(float light){
+	Ligth_level=light;
+}
 void setSoilhumidity(int soil){
 	Soil_humidity=soil;
 }
@@ -171,7 +174,7 @@ esp_err_t FSM(void)
 		ssd1306_display_text(&dev, 3, string, strlen(string), false);
 		sprintf(&string, "Soil hum:%d%%", Soil_humidity);
 		ssd1306_display_text(&dev, 4, string, strlen(string), false);
-		sprintf(&string, "Ligth level:%02d", Ligth_level);
+		sprintf(&string, "Ligth level:%0.1f", Ligth_level);
 		ssd1306_display_text(&dev, 5, string, strlen(string), false);
 		ssd1306_display_text(&dev, 7, "Back", 4, false);
 		//ESP_LOGW(tag, "estoy en 2");
