@@ -1,6 +1,4 @@
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-#include "driver/gpio.h"
-#define BUTTON_PIN  GPIO_NUM_35
-
-void soil_humidity(void *pvParameters);
+esp_err_t set_timer2(void);
+esp_err_t set_ADC2(void);
+void vTimerCallback2(TimerHandle_t pxTimer);
+int getSoil_Humidity(); 

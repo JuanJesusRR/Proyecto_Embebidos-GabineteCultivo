@@ -7,6 +7,7 @@
 #define ventout 18
 #define humidificator 12
 #define ventin 19
+#define bomba 13
 
 esp_err_t init_ventout(void){
 
@@ -44,5 +45,18 @@ esp_err_t init_ventin(void){
 esp_err_t ventinControl(bool i){
 
     gpio_set_level(ventin, i);
+    return ESP_OK;
+}
+
+esp_err_t init_bomba(void){
+
+    gpio_reset_pin(bomba);
+    gpio_set_direction(bomba, GPIO_MODE_OUTPUT);
+
+    return ESP_OK;
+}
+esp_err_t bombaControl(bool i){
+
+    gpio_set_level(bomba, i);
     return ESP_OK;
 }

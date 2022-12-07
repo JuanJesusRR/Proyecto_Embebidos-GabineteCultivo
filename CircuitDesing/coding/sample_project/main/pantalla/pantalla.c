@@ -9,6 +9,7 @@
 #include "font8x8_basic.h"
 #include "freertos/timers.h"
 #include "driver/adc.h"
+#include <math.h>
 #define tag "SSD1306"
 // variable for the screen
 SSD1306_t dev;
@@ -17,7 +18,7 @@ char string[30];
 int Soil_humidity = 10;
 int Temp = 20;
 int Air_humidity = 25;
-int tank_level = 50;
+float tank_level = 50;
 bool Ligth_level = true;
 // Buttoms variables
 int selected_buttonSW = 0;
@@ -65,6 +66,14 @@ esp_err_t Enter(void);
 esp_err_t Go_to_back(void);
 esp_err_t configure_manual_settings(void);
 
+void setSoilhumidity(int soil){
+	Soil_humidity=soil;
+}
+void setTankLevel(float tank){
+	
+	
+	tank_level=tank;
+}
 void setTemp(float temperature)
 {
 	Temp = temperature;
@@ -156,11 +165,11 @@ esp_err_t FSM(void)
 		ssd1306_display_text(&dev, 0, "Actual variables", 16, false);
 		sprintf(&string, "Temp:%02d", Temp);
 		ssd1306_display_text(&dev, 1, string, strlen(string), false);
-		sprintf(&string, "Air humidity:%02d", Air_humidity);
+		sprintf(&string, "Air humidity:%02d%%", Air_humidity);
 		ssd1306_display_text(&dev, 2, string, strlen(string), false);
-		sprintf(&string, "Tank level:%02d", tank_level);
+		sprintf(&string, "Tank level:%0.1f%%", tank_level);
 		ssd1306_display_text(&dev, 3, string, strlen(string), false);
-		sprintf(&string, "Soil humidity:%02d", Soil_humidity);
+		sprintf(&string, "Soil hum:%d%%", Soil_humidity);
 		ssd1306_display_text(&dev, 4, string, strlen(string), false);
 		sprintf(&string, "Ligth level:%02d", Ligth_level);
 		ssd1306_display_text(&dev, 5, string, strlen(string), false);

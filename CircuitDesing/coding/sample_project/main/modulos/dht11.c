@@ -26,7 +26,7 @@ void dht11(void *pvParameters){
     printf("El sensor no se encuentra debidamente conectado");
     vTaskDelay(pdMS_TO_TICKS(500));
   }else{ 
-  printf("Humidity: %.1f%% Temp: %.1fC\n", hum, temp);
+  //printf("Humidity: %.1f%% Temp: %.1fC\n", hum, temp);
   vTaskDelay(pdMS_TO_TICKS(500));}
   }
 }

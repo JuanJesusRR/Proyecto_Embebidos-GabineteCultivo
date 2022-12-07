@@ -7,3 +7,6 @@ esp_err_t humidControl(bool i);
 
 esp_err_t init_ventin(void);
 esp_err_t ventinControl(bool i);
+
+esp_err_t init_bomba(void);
+esp_err_t bombaControl(bool i);
