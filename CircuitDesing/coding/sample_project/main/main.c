@@ -74,7 +74,7 @@ void app_main()
         printf("Humedad suelo %d \n",getSoil_Humidity()*100/4095);
         
         waterControl();
-        //HumidityControl();
+        HumidityControl();
         vTaskDelay(100);
     }
     
